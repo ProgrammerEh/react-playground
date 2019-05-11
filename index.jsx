@@ -39,9 +39,6 @@ const Home = () => {
     const { authors } = defaultState;
     return (
         < div >
-            <h2>
-                {appTitle}
-            </h2>
             <h3>
                 The place for experts, experts of words...
             </h3>
