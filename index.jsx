@@ -7,10 +7,10 @@ import { defaultState } from './defaultState';
 
 const appTitle = `Wordmaster's Forum`;
 
-const AuthorNameLink = ({authorId, name})=>(
-    <div></div>
+const AuthorNameLink = ({ authorId, name }) => (
+    <div>{name}</div>
 
-) 
+)
 
 const Home = () => {
     const { authors } = defaultState;
@@ -24,8 +24,8 @@ const Home = () => {
             </h3>
             <div>
                 <ul>
-                    {authors.map((author) => (
-                        <li key={author.authorId}>{author.name}</li>
+                    {authors.map((author, index) => (
+                        <li key={index}>{author.name}</li>
                     ))}
                 </ul>
             </div>
