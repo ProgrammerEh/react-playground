@@ -16,6 +16,7 @@ const Main = () => (
         </h2>
         <Route exact path="/" component={Home} />
         <Route path="/author/:authorId" component={AuthorDetail} />
+        <Route path="/article/:articleId" component={ArticleDetail} />
     </BrowserRouter>
 )
 
@@ -68,5 +69,12 @@ const Home = () => {
         </div>
     )
 };
+
+const ArticleDetail = ({ match }) => {
+    const { articleId } = match.params;
+    console.log(articleId);
+    return <div>Article Detail!</div>;
+}
+
 
 ReactDOM.render(<Main></Main>, document.getElementById("Container"));
