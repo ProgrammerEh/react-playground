@@ -3,6 +3,7 @@ console.log("Hello classroom!");
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { AuthorNameLink } from './AuthorNameLink';
 
 import { defaultState } from './defaultState';
 
@@ -49,11 +50,6 @@ const AuthorDetail = ({ match }) => {
         </div>
     )
 }
-
-const AuthorNameLink = ({ authorId, name }) => (
-    <a href={`/author/${authorId}`}>{name}</a>
-
-)
 
 const Home = () => {
     const { authors } = defaultState;
