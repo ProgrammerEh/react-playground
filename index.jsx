@@ -36,8 +36,8 @@ const AuthorDetail = ({ match }) => {
                 {author.name}'s Articles
             </h4>
             <ul>
-                {articles.map((article, index) => (
-                    <li key={index}>
+                {articles.map((article) => (
+                    <li key={article.articleId}>
                         {article.title}
                     </li>
                 ))}
