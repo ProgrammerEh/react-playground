@@ -8,7 +8,7 @@ import { defaultState } from './defaultState';
 const appTitle = `Wordmaster's Forum`;
 
 const AuthorNameLink = ({ authorId, name }) => (
-    <div>{name}</div>
+    <a href={`/author/${authorId}`}>{name}</a>
 
 )
 
