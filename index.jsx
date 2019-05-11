@@ -27,7 +27,7 @@ const AuthorDetail = ({ match }) => {
     if (!author) {
         return <div>No such author was found! Try again.</div>
     }
-    return <div>Author Details</div>;
+    return <div>{author.name}'s Articles</div>;
 }
 
 const AuthorNameLink = ({ authorId, name }) => (
