@@ -109,4 +109,7 @@ function render() {
     ReactDOM.render(<Main></Main>, document.getElementById("Container"));
 }
 
-render();
+setTimeout(()=>{
+    render();
+},1000)
+//render();
