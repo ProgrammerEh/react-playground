@@ -22,6 +22,11 @@ const Main = () => (
 const AuthorDetail = ({ match }) => {
     const { authorId } = match.params;
     console.log("The id passed from the route is", authorId);
+    const author = defaultState.authors.find(author => author.authorId === authorId);
+    console.log(author);
+    if (!author) {
+        return <div>No such author was found! Try again.</div>
+    }
     return <div>Author Details</div>;
 }
 
