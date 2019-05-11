@@ -72,8 +72,21 @@ const Home = () => {
 
 const ArticleDetail = ({ match }) => {
     const { articleId } = match.params;
-    console.log(articleId);
-    return <div>Article Detail!</div>;
+
+    const article = defaultState.articles.find(article => article.articleId === articleId);
+    console.log("article?", article, articleId);
+
+    if (!article) {
+        return <div>No article found!</div>
+    }
+    return <div>
+        <h3>
+            {article.title}
+        </h3>
+        <p>
+            {article.content}
+        </p>
+    </div>;
 }
 
 
