@@ -12,19 +12,22 @@ export const defaultState = {
         articleId: "article-1",
         authorId: "user-1",
         title: "Looking great in black",
-        content: "Crow's feathers make a great and stylish accessory..."
+        content: "Crow's feathers make a great and stylish accessory...",
+        score: 1
     },
     {
         articleId: "article-2",
         authorId: "user-1",
         title: "a2 title",
-        content: "a2 content"
+        content: "a2 content",
+        score: 2
     },
     {
         articleId: "article-3",
         authorId: "user-2",
         title: "a3 title",
-        content: "a3 content"
+        content: "a3 content",
+        score: 3
 
     }]
 };

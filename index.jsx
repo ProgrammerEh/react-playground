@@ -66,6 +66,15 @@ const Home = () => {
     )
 };
 
+const articleSelector = articleId => defaultState.articles.find(article => article.articleId === articleId);
+
+function rateArticle(articleId) {
+    console.log("you rated", articleId);
+    const article = articleSelector(articleId);
+    article.score++;
+    render();
+}
+
 const ArticleDetail = ({ match }) => {
     const { articleId } = match.params;
 
@@ -89,8 +98,15 @@ const ArticleDetail = ({ match }) => {
         <p>
             {article.content}
         </p>
+        <div>
+            This article score is {article.score}
+        </div>
+        <button className="btn btn-primary" onClick={() => rateArticle(article.articleId)}>Like</button>
     </div>;
 }
 
+function render() {
+    ReactDOM.render(<Main></Main>, document.getElementById("Container"));
+}
 
-ReactDOM.render(<Main></Main>, document.getElementById("Container"));
+render();
