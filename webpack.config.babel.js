@@ -1,18 +1,19 @@
 export default {
+
     entry: './index.jsx',
     output: {
         filename: "bundle.js"
     },
-    devServer:{
+    devServer: {
         historyApiFallback: true
     },
-    resolve:{
+    resolve: {
         extensions: ['.js', '.jsx']
     },
-    module :{
+    module: {
         rules: [{
             test: /\.jsx?/,
-            loader:'babel-loader'
+            loader: 'babel-loader'
         }]
     }
 
