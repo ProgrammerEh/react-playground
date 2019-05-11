@@ -12,7 +12,10 @@ const Main = () => (
 
     <BrowserRouter>
         <h2>
-            {appTitle}
+
+            <a href={`/`}>{appTitle}</a>
+
+
         </h2>
         <Route exact path="/" component={Home} />
         <Route path="/author/:authorId" component={AuthorDetail} />
@@ -39,7 +42,7 @@ const AuthorDetail = ({ match }) => {
             <ul>
                 {articles.map((article) => (
                     <li key={article.articleId}>
-                        {article.title}
+                        <a href={`/article/${article.articleId}`}>{article.title}</a>
                     </li>
                 ))}
             </ul>
