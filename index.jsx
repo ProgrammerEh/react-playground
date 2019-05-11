@@ -79,10 +79,17 @@ const ArticleDetail = ({ match }) => {
     if (!article) {
         return <div>No article found!</div>
     }
+
+    const author = defaultState.authors.find(author => author.authorId === article.authorId);
+
+
     return <div>
         <h3>
             {article.title}
         </h3>
+        <h4>
+            By <AuthorNameLink {...author} />
+        </h4>
         <p>
             {article.content}
         </p>

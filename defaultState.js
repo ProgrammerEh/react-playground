@@ -17,14 +17,14 @@ export const defaultState = {
     {
         articleId: "article-2",
         authorId: "user-1",
-        title: "a2",
-        content: "a2"
+        title: "a2 title",
+        content: "a2 content"
     },
     {
         articleId: "article-3",
         authorId: "user-2",
-        title: "a3",
-        content: "a3"
+        title: "a3 title",
+        content: "a3 content"
 
     }]
 };
