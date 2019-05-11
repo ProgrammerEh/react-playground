@@ -25,7 +25,7 @@ const Home = () => {
             <div>
                 <ul>
                     {authors.map((author, index) => (
-                        <li key={index}>{author.name}</li>
+                        <li key={index}><AuthorNameLink {...author} /></li>
                     ))}
                 </ul>
             </div>
