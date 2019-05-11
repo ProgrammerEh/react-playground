@@ -13,10 +13,7 @@ const Main = () => (
 
     <BrowserRouter>
         <h2>
-
             <a href={`/`}>{appTitle}</a>
-
-
         </h2>
         <Route exact path="/" component={Home} />
         <Route path="/author/:authorId" component={AuthorDetail} />
