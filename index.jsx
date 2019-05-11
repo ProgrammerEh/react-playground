@@ -27,7 +27,23 @@ const AuthorDetail = ({ match }) => {
     if (!author) {
         return <div>No such author was found! Try again.</div>
     }
-    return <div>{author.name}'s Articles</div>;
+    const articles = defaultState.articles.filter(article => article.authorId === authorId);
+    console.log(articles);
+
+    return (
+        <div>
+            <h4>
+                {author.name}'s Articles
+            </h4>
+            <ul>
+                {articles.map((article, index) => (
+                    <li key={index}>
+                        {article.title}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    )
 }
 
 const AuthorNameLink = ({ authorId, name }) => (
